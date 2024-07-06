@@ -24,7 +24,7 @@
 <body>
     <!--todo HEADER -->
     <header class="header_comida">
-        <div class="container_banner">
+        <div class="container_banner_catalogo">
             <a href="../Index.html">
                 <i class="fa-solid fa-circle-left">Voltar</i>
             </a>
@@ -38,35 +38,93 @@
 
         <div class="container_categorias">
             <h2 class="titulo_categoria">Conheça nossos Pacotes de Banho e Tosa</h2>
+            <!-- todo CATALOGO RAÇÕES -->
+            <div class="container_food">
+                <img src="../imgs/comida/food_1.png" alt="Pedigree Filhote - 15kg" class="food_img">
 
-            <div class="categorias_tipo">
-                <a href="./pages/comida.html" class="comida_produtos">
-                    <img class="img_comida" alt="foto de ração de cachorro" src="./imgs/icon_comida.png"/>
-                    <p>Rações e Petiscos</p>
-                </a>
+                <div>
+                    <p class="food_nome">Pedigree Filhote - 15kg</p>
+                    <div class="food_detalhes">
+                        <p class="food_preco">R$ 168,00</p>
+                        <button class="btn_adicionarItem add-to-cart-btn"
+                        data-name="Pedigree FILHOTE/15kg"
+                        data-price="168,60">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
 
-                <a href="./pages/medicamentos.html" class="medicamento_produtos">
-                    <img class="img_comida" alt="foto de ração de cachorro" src="./imgs/icon_medicamento.png"/>
-                    <p>Medicamentos</p>
-                </a>
-
-                <a href="./pages/acessorios.html" class="acessorios_produtos">
-                    <img class="img_comida" alt="foto de ração de cachorro" src="./imgs/icon_acessorios.png"/>
-                    <p>Brinquedos e Acessórios</p>
-                </a>
-
-                <a href="./pages/petshop.html" class="petshop_produtos">
-                    <img class="img_comida" alt="foto de ração de cachorro" src="./imgs/icon_petshop.png"/>
-                    <p>Banho e Tosa</p>
-                </a>
 
             </div>
 
             
+            <div class="container_food">
+                <img src="../imgs/comida/food_2.png" alt="Pedigree Filhote - 15kg" class="food_img">
+
+                <div>
+                    <p class="food_nome">Pedigree Adulto - 15kg</p>
+                    <div class="food_detalhes">
+                        <p class="food_preco">R$ 159,00</p>
+                        <button class="btn_adicionarItem add-to-cart-btn"
+                        data-name="Pedigree ADULTO/15kg"
+                        data-price="159,60">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="container_food">
+                <img src="../imgs/comida/food_3.png" alt="Pedigree Filhote - 15kg" class="food_img">
+
+                <div>
+                    <p class="food_nome">Pedigree Adulto Raças Pequenas - 1kg</p>
+                    <div class="food_detalhes">
+                        <p class="food_preco">R$ 21,90</p>
+                        <button class="btn_adicionarItem add-to-cart-btn"
+                        data-name="Pedigree ADULTO/ RAÇAS PEQUENAS 1kg"
+                        data-price="21,90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="container_food">
+                <img src="../imgs/comida/food_4.png" alt="Pedigree Filhote - 15kg" class="food_img">
+
+                <div>
+                    <p class="food_nome">Patê Pedigree Lata - 280gr</p>
+                    <div class="food_detalhes">
+                        <p class="food_preco">R$ 9,90</p>
+                        <button class="btn_adicionarItem add-to-cart-btn"
+                        data-name="Patê Pedigre FRANGO/280gr"
+                        data-price="9,90">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            
         </div>
 
+        
     </main>
-
+    <footer class="container_carrinho">
+        <button class="btn_carrinho"
+        id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja seu carrinho
+            <i class="fa fa-cart-plus" ></i>
+        </button>
+    </footer>
+    <script src="../scripts/script.js"></script>
 
 
 </body>

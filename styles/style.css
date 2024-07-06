@@ -66,6 +66,7 @@ a {
     flex-direction: column;
     align-items: center;
 }
+
 .logo_header:hover {
     scale: 1.1;
     animation-duration: 1s;
@@ -90,7 +91,7 @@ a {
 
 }
 
-.ontainer_categorias {
+.container_categorias {
     display: flex;
     flex-direction: column;
     
@@ -224,4 +225,52 @@ a {
     background-color: var(--roxo-primario);
     border: none;
     border-radius: 8px;
+}
+
+/* ! CSS COMIDA - RAÇÕES E PETISCOS */
+
+.container_banner_catalogo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10vw;
+    top: 3rem;
+    
+}
+.container_banner_catalogo a {
+    color: #46166b;
+    text-transform: lowercase;
+}
+.container_food {
+    display: flex;
+    width: 100%;
+    column-gap: 0.5rem;
+}
+.food_img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: .375rem;
+}
+.food_nome {
+    font-weight: 700;
+    color:#012B34;
+    font-size: 16px;
+}
+.food_detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+.food_preco {
+    font-weight: 700;
+}
+.btn_adicionarItem {
+    background-color: #46166b;
+    padding: 0.2rem 1rem;
+    border-radius: 8px;
+}
+.btn_adicionarItem i {
+    color: #fff;
 }

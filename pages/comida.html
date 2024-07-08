@@ -34,15 +34,16 @@
 
 
     <!-- TODO INICIO DO MAIN -->
+    <div id="menu">
     <main>
 
         <div class="container_categorias">
-            <h2 class="titulo_categoria">Conheça nossos Pacotes de Banho e Tosa</h2>
+            <h2 class="titulo_categoria">Rações e petiscos pro seu Pet!</h2>
             <!-- todo CATALOGO RAÇÕES -->
             <div class="container_food">
                 <img src="../imgs/comida/food_1.png" alt="Pedigree Filhote - 15kg" class="food_img">
 
-                <div>
+                <div class="container_food_box">
                     <p class="food_nome">Pedigree Filhote - 15kg</p>
                     <div class="food_detalhes">
                         <p class="food_preco">R$ 168,00</p>
@@ -61,7 +62,7 @@
             <div class="container_food">
                 <img src="../imgs/comida/food_2.png" alt="Pedigree Filhote - 15kg" class="food_img">
 
-                <div>
+                <div class="container_food_box">
                     <p class="food_nome">Pedigree Adulto - 15kg</p>
                     <div class="food_detalhes">
                         <p class="food_preco">R$ 159,00</p>
@@ -79,7 +80,7 @@
             <div class="container_food">
                 <img src="../imgs/comida/food_3.png" alt="Pedigree Filhote - 15kg" class="food_img">
 
-                <div>
+                <div class="container_food_box">
                     <p class="food_nome">Pedigree Adulto Raças Pequenas - 1kg</p>
                     <div class="food_detalhes">
                         <p class="food_preco">R$ 21,90</p>
@@ -97,7 +98,7 @@
             <div class="container_food">
                 <img src="../imgs/comida/food_4.png" alt="Pedigree Filhote - 15kg" class="food_img">
 
-                <div>
+                <div class="container_food_box">
                     <p class="food_nome">Patê Pedigree Lata - 280gr</p>
                     <div class="food_detalhes">
                         <p class="food_preco">R$ 9,90</p>
@@ -111,11 +112,60 @@
 
 
             </div>
+
+            <div class="container_food">
+                <img src="../imgs/comida/food_5.png" alt="Ração Golden Gatos Adultos Frango 3,0 Kg" class="food_img">
+
+                <div class="container_food_box">
+                    <p class="food_nome">Ração Golden Gatos Adultos Frango 3,0 Kg</p>
+                    <div class="food_detalhes">
+                        <p class="food_preco">R$ 27,50</p>
+                        <button class="btn_adicionarItem add-to-cart-btn"
+                        data-name="Ração Golden Gatos Adultos Frango 3,0 Kg"
+                        data-price="27,50">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+
+            
             
         </div>
 
         
     </main>
+    </div>
+    <!--todo MODAL CARRINHO -->
+
+    <div class="modal_carrinho" id="cart-modal">
+        <div class="container_modal">
+            <h2 class="carrinho_titulo">Meu carrinho</h2>
+
+            <div id="cart-items" class="container_pedido"></div>
+                <p>Total: <span id="cart-total"> 0.00</span></p>
+
+                 <p class="pedido_endereco">Endereço de Entrega:</p>
+                 <input type="text"
+                    placeholder="Digite seu endereço completo"
+                    id="adress"
+                    class="input_endereco"
+                    >
+                <p class="text-red-500 hidden" id="adress-warn" >Digite seu endereço completo!</p>
+
+
+            <div class="pedidos_botoes">
+                <button class="btn_close_modal" id="close-modal-btn">Fechar</button>
+                <button class="btn_finalizar_pedido" id="checkout-btn">Finalizar Pedido!</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--todo fim MODAL CARRINHO -->
     <footer class="container_carrinho">
         <button class="btn_carrinho"
         id="cart-btn">

@@ -12,7 +12,32 @@ const adressWarn = document.getElementById("adress-warn");
 
 let cart = [];
 
+// Carregar o carrinho do localStorage ao iniciar
+function loadCartFromLocalStorage() {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      cart = JSON.parse(storedCart);
+    }
+}
 
+// Salvar o carrinho no localStorage sempre que for atualizado
+function saveCartToLocalStorage() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+  
+  // Atualizar o modal do carrinho e salvar no localStorage
+  function updateCartModal() {
+    // ... (código original da função updateCartModal)
+  
+    saveCartToLocalStorage(); // Salvar o carrinho no localStorage após a atualização
+  }
+  
+  // Carregar o carrinho do localStorage ao iniciar a página
+  loadCartFromLocalStorage();
+  
+  // Chamar a função updateCartModal() para exibir os itens do carrinho ao carregar a página
+  updateCartModal();
+  
 
 // Botão do carrinho
 cartBtn.addEventListener("click", function(){
@@ -122,6 +147,7 @@ function removeItemCart(name){
 
         cart.splice(index, 1);
         updateCartModal();
+        saveCartToLocalStorage();
     }
 
 
@@ -198,3 +224,5 @@ if(isOpen){
     spanItem.classList.remove("bg-green-600")
     spanItem.classList.add("bg-red-500");
 }
+
+window.addEventListener("load", updateCartModal);

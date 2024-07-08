@@ -25,12 +25,6 @@ function saveCartToLocalStorage() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }
   
-  // Atualizar o modal do carrinho e salvar no localStorage
-  function updateCartModal() {
-    // ... (código original da função updateCartModal)
-  
-    saveCartToLocalStorage(); // Salvar o carrinho no localStorage após a atualização
-  }
   
   // Carregar o carrinho do localStorage ao iniciar a página
   loadCartFromLocalStorage();
@@ -121,7 +115,7 @@ function updateCartModal(){
     })
 
     cartCounter.innerHTML = cart.length;
-
+    saveCartToLocalStorage();
 }
 
 // ?? função para remover item do carrinho
